@@ -1,12 +1,13 @@
 
 import './App.css'
+import CommonLayout from './MainLoyout/CommonLayoput/CommonLayout'
 
 function App() {
 
 
   return (
     <>
-      <h1>this is a simple React app</h1>
+     <CommonLayout/>
     </>
   )
 }
