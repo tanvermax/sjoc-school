@@ -125,11 +125,10 @@
 }
 
 #root {
-  width: 1126px;
+  /* width: 1126px; */
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -144,7 +143,7 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  /* color: var(--text-h); */
 }
 
 h1 {
@@ -268,3 +267,6 @@ code {
     @apply bg-background text-foreground;}
   html {
     @apply font-sans;}}
+
+
+    
