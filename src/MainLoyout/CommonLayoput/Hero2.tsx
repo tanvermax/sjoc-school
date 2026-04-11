@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Play, Star, Users, Briefcase, TrendingUp, DollarSign } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 

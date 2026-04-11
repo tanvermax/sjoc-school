@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 import Navbar from "../Home/Navber";
-import Footer from "./Footer";
+
 
 export default function CommonLayout() {
   return (

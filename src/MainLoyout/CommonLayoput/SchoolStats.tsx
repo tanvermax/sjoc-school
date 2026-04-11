@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Users, GraduationCap, School, BookOpen, Trophy } from 'lucide-react';
 
 const stats = [

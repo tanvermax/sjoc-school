@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Mail, GraduationCap, Award, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const teacherData = [

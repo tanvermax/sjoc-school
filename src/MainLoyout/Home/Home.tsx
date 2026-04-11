@@ -1,6 +1,7 @@
 // import AboutSection from "../CommonLayoput/About";
 import AboutSchool from "../CommonLayoput/About2";
-import { FAQSection } from "../CommonLayoput/Faqsection";
+import { FAQSection } from "../CommonLayoput/FAQSection";
+
 import Footer from "../CommonLayoput/Footer";
 import EskoolyHero from "../CommonLayoput/Hero2";
 

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ShieldCheck, GraduationCap, Lightbulb, Users, CheckCircle2 } from 'lucide-react';
 
 const AboutSchool = () => {

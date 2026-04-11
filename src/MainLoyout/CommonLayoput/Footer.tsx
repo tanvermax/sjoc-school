@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { 
   MapPin, Mail, Phone, 
  Apple, PlayCircle, ArrowUpRight, GraduationCap 
