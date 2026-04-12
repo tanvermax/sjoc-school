@@ -1,5 +1,11 @@
-import  { useState } from 'react';
-import { HelpCircle, ChevronDown } from 'lucide-react';
+
+import { HelpCircle } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const faqData = [
   {
@@ -45,72 +51,53 @@ const faqData = [
 ];
 
 export const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
   return (
-    <section id='faq'  className="relative py-24 bg-white overflow-hidden">
-      {/* Background Subtle Accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[#F0EEFD]/30 -z-10" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#F0EEFD] rounded-full blur-[120px] -z-10 opacity-60" />
+    <section id="faq" className="relative py-24 bg-white overflow-hidden">
+      {/* Background Subtle Accent - Using blue tints */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-blue-50/20 -z-10" />
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-50 rounded-full blur-[120px] -z-10 opacity-60" />
 
       <div className="container mx-auto px-6 relative z-10">
-        
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 bg-[#613DDF]/10 text-[#613DDF] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-[#613DDF]/10">
+          <div className="inline-flex items-center gap-2 bg-[#4185F4]/10 text-[#4185F4] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-[#4185F4]/10">
             <HelpCircle size={14} />
             Common Questions
           </div>
-          
+
           <h2 className="font-['Fraunces'] text-4xl md:text-5xl font-black text-slate-900 leading-tight">
-            Frequently Asked <span className="text-[#613DDF]  ">Questions</span>
+            Frequently Asked <span className="text-[#4185F4]">Questions</span>
           </h2>
-          
+
           <p className="text-slate-500 text-lg">
-            Everything you need to know about our admission, programs, and educational system.
+            Everything you need to know about our admission, programs, and
+            educational system.
           </p>
         </div>
 
-        {/* FAQ Grid - Split into 2 columns for better readability */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
-          {faqData.map((item, index) => (
-            <div 
-              key={index}
-              className={`group transition-all duration-300 rounded-[2rem] border ${
-                openIndex === index 
-                ? 'bg-white border-[#613DDF] shadow-xl shadow-[#613DDF]/10' 
-                : 'bg-[#F0EEFD]/50 border-transparent hover:border-[#613DDF]/30'
-              }`}
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left"
+        {/* FAQ Grid using Shadcn Accordion */}
+        <div className="max-w-7xl mx-auto">
+          <Accordion type="single" collapsible className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
+            {faqData.map((item, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className={`group px-6 rounded-[2rem] border-2 transition-all duration-300 data-[state=open]:bg-white data-[state=open]:border-[#4185F4] data-[state=open]:shadow-xl data-[state=open]:shadow-blue-600/10 data-[state=closed]:bg-slate-50/50 data-[state=closed]:border-transparent hover:border-[#4185F4]/30`}
               >
-                <span className={`text-lg font-bold pr-4  transition-colors ${
-                  openIndex === index ? 'text-[#613DDF]' : 'text-[#613DDF]'
-                }`}>
-                  {item.q}
-                </span>
-                <div className={`flex-shrink-0 transition-transform duration-300 ${
-                  openIndex === index ? 'rotate-180 text-[#613DDF]' : 'text-slate-400'
-                }`}>
-                  <ChevronDown size={20} />
-                </div>
-              </button>
-              
-              <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                openIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-              }`}>
-                <div className="p-6 pt-0 text-slate-500 leading-relaxed border-t border-[#F0EEFD]">
-                  {item.a}
-                </div>
-              </div>
-            </div>
-          ))}
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <span className="text-lg font-bold text-left pr-4 text-slate-800 group-data-[state=open]:text-[#4185F4] transition-colors">
+                    {item.q}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="text-slate-500 text-base leading-relaxed pb-6">
+                  <div className="pt-4 border-t border-blue-50">
+                    {item.a}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
-
-        {/* Bottom Contact Prompt */}
-
       </div>
     </section>
   );

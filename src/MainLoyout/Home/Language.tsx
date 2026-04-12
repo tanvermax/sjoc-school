@@ -17,8 +17,8 @@ export function LanguageDropdown() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" className="rounded-full">
-          <Avatar className=" place-content-center">
-           <IoLanguage  />
+          <Avatar className="border-[#613DDF] border place-content-center">
+           <IoLanguage className="text-[#613DDF]" />
 
             {/* <AvatarFallback>CN</AvatarFallback> */}
           </Avatar>

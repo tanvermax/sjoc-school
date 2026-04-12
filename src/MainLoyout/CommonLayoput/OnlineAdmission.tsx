@@ -3,31 +3,30 @@ import { Button } from "@/components/ui/button";
 
 const OnlineRegistration = () => {
   return (
-    <section className="relative min-h-[600px] w-full overflow-hidden bg-[#613DDF] py-16 lg:py-24 text-white">
-      {/* Dynamic Background Elements */}
+    <section className="relative min-h-[600px] w-full overflow-hidden bg-[#4185F4] py-16 lg:py-24 text-white">
+      {/* Dynamic Background Elements - Using soft blue variants */}
       <div 
         className="absolute inset-0 opacity-10" 
-        style={{ backgroundImage: `radial-gradient(#DDDDF9 1px, transparent 1px)`, backgroundSize: '40px 40px' }} 
+        style={{ backgroundImage: `radial-gradient(#ffffff 1px, transparent 1px)`, backgroundSize: '40px 40px' }} 
       />
-      <div className="absolute -right-20 top-0 h-[300px] w-[300px] lg:h-[500px] lg:w-[500px] rounded-full bg-[#DDDDF9]/10 blur-[80px] lg:blur-[120px]" />
+      <div className="absolute -right-20 top-0 h-[300px] w-[300px] lg:h-[500px] lg:w-[500px] rounded-full bg-white/10 blur-[80px] lg:blur-[120px]" />
       
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
           
           {/* ── LEFT CONTENT ── */}
-          {/* order-1 ensures text is always first on mobile */}
           <div className="flex flex-col text-center lg:text-left items-center lg:items-start space-y-6 lg:space-y-8 animate-in fade-in slide-in-from-left-8 duration-1000 order-1">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#DDDDF9] bg-[#DDDDF9]/10 px-4 py-1.5 text-[10px] lg:text-xs font-bold uppercase tracking-widest text-[#ffffff]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[10px] lg:text-xs font-bold uppercase tracking-widest text-white">
               <Sparkles size={14} />
               Online Registration
             </div>
 
             <h2 className="font-['Fraunces'] text-4xl sm:text-5xl lg:text-6xl font-black leading-tight lg:leading-[1.1]">
               Register Online <br className="hidden sm:block" />
-              <span className="text-[#DDDDF9]">For Admission</span>
+              <span className="text-blue-100">For Admission</span>
             </h2>
 
-            <p className="max-w-md text-base lg:text-lg leading-relaxed text-[#DDDDF9]/80">
+            <p className="max-w-md text-base lg:text-lg leading-relaxed text-blue-50/80">
               Complete your registration online and begin your learning journey with Sunatul Jamaat of Ontario Canada. 
               Our team will contact you to guide you through the next steps.
             </p>
@@ -40,15 +39,15 @@ const OnlineRegistration = () => {
                 { icon: <UserPlus size={20} />, text: "Secure your place in the upcoming session" }
               ].map((step, i) => (
                 <div key={i} className="flex items-center gap-4 group text-left">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#DDDDF9]/20 text-[#DDDDF9] group-hover:bg-[#DDDDF9] group-hover:text-[#613DDF] transition-all">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 text-white group-hover:bg-white group-hover:text-[#4185F4] transition-all">
                     {step.icon}
                   </div>
-                  <span className="text-sm sm:text-base font-medium text-[#DDDDF9]">{step.text}</span>
+                  <span className="text-sm sm:text-base font-medium text-blue-50">{step.text}</span>
                 </div>
               ))}
             </div>
 
-            <Button className="group h-14 lg:h-16 w-full sm:w-fit rounded-2xl bg-[#DDDDF9] px-10 text-lg font-black text-[#613DDF] hover:bg-white transition-all shadow-xl shadow-black/20">
+            <Button className="group h-14 lg:h-16 w-full sm:w-fit rounded-2xl bg-white px-10 text-lg font-black text-[#4185F4] hover:bg-blue-50 transition-all shadow-xl shadow-blue-900/20">
               Apply Now
               <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
             </Button>
@@ -59,7 +58,7 @@ const OnlineRegistration = () => {
             <div className="relative h-[320px] w-full max-w-[320px] sm:h-[450px] sm:max-w-[450px] lg:h-[480px] lg:max-w-[480px]">
               
               {/* Main Image Base */}
-              <div className="absolute inset-0 rounded-[3rem] lg:rounded-[4rem] bg-gradient-to-br from-[#DDDDF9]/20 to-transparent rotate-6 blur-2xl" />
+              <div className="absolute inset-0 rounded-[3rem] lg:rounded-[4rem] bg-gradient-to-br from-white/20 to-transparent rotate-6 blur-2xl" />
               <div className="relative h-full w-full overflow-hidden rounded-[3rem] lg:rounded-[4rem] border-4 lg:border-8 border-white/10 shadow-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070" 
@@ -68,7 +67,7 @@ const OnlineRegistration = () => {
                 />
               </div>
 
-              {/* Floating Data Badge - Scaled for mobile */}
+              {/* Floating Data Badge */}
               <div className="absolute -left-4 sm:-left-12 top-6 sm:top-12 flex w-36 sm:w-48 flex-col rounded-2xl sm:rounded-3xl bg-white p-3 sm:p-5 text-slate-800 shadow-2xl animate-bounce-slow">
                 <div className="flex items-center justify-between text-[8px] sm:text-[10px] font-black uppercase text-slate-400">
                   <span>Admission Status</span>
@@ -81,28 +80,28 @@ const OnlineRegistration = () => {
                        <img src={`https://i.pravatar.cc/100?img=${i}`} alt="user" />
                      </div>
                    ))}
-                   <div className="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full border-2 border-white bg-[#613DDF] text-[8px] sm:text-[10px] font-bold text-white">
+                   <div className="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full border-2 border-white bg-[#4185F4] text-[8px] sm:text-[10px] font-bold text-white">
                      +12
                    </div>
                 </div>
               </div>
 
-              {/* Security/Trust Badge - Scaled and repositioned */}
-              <div className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-4 flex items-center gap-3 sm:gap-4 rounded-2xl sm:rounded-3xl bg-[#DDDDF9] p-4 sm:p-6 shadow-2xl">
-                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-[#613DDF] text-[#DDDDF9]">
+              {/* Security/Trust Badge */}
+              <div className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-4 flex items-center gap-3 sm:gap-4 rounded-2xl sm:rounded-3xl bg-blue-50 p-4 sm:p-6 shadow-2xl">
+                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-[#4185F4] text-white">
                     <Sparkles size={24} className="sm:w-8 sm:h-8" />
                  </div>
-                 <div className="text-[#613DDF]">
+                 <div className="text-[#4185F4]">
                     <p className="text-[8px] sm:text-xs font-black uppercase tracking-widest opacity-60">Verified</p>
                     <p className="text-base sm:text-xl font-black">Safe & Secure</p>
                  </div>
               </div>
 
-              {/* Decorative Arrow Overlay - Hidden on small mobile to avoid clutter */}
+              {/* Decorative Arrow Overlay */}
               <div className="absolute top-1/2 -right-8 opacity-40 hidden sm:block">
-                <svg width="80" height="60" lg-width="120" lg-height="80" viewBox="0 0 120 80" fill="none">
-                  <path d="M10 70C30 50 60 80 110 10" stroke="#DDDDF9" strokeWidth="4" strokeLinecap="round" strokeDasharray="8 8" />
-                  <path d="M110 10L95 12M110 10L108 25" stroke="#DDDDF9" strokeWidth="4" strokeLinecap="round" />
+                <svg width="80" height="60" viewBox="0 0 120 80" fill="none">
+                  <path d="M10 70C30 50 60 80 110 10" stroke="#ffffff" strokeWidth="4" strokeLinecap="round" strokeDasharray="8 8" />
+                  <path d="M110 10L95 12M110 10L108 25" stroke="#ffffff" strokeWidth="4" strokeLinecap="round" />
                 </svg>
               </div>
 
