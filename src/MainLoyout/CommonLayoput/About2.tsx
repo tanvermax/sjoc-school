@@ -3,7 +3,7 @@ import { ShieldCheck, GraduationCap, Lightbulb, Users, CheckCircle2 } from 'luci
 
 const AboutSchool = () => {
   return (
-    <section id="about" className="relative max-w-7xl mx-auto py-12 bg-[#EEF3FC] mt-10 rounded-4xl overflow-hidden">
+    <section id="about" className="relative max-w-7xl mx-auto py-12 bg-[#EEF3FC] my-10 rounded-4xl overflow-hidden">
       {/* Background Subtle Elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#E5EDFD]/50 rounded-full blur-[120px] -z-10" />
       

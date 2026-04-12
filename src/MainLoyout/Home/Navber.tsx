@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { LanguageDropdown } from "./Language";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -22,7 +23,7 @@ export default function Navbar() {
   return (
     /* 1. Added 'fixed' or 'sticky' to the WRAPPER, not just the inner content */
     /* 2. Changed top-0 to top-4 to give it that floating 'eSkooly' look */
-    <div className="fixed inset-x-0 top-4 z-[100] px-5"> 
+    <div className="fixed inset-x-0 top-4 z-50 px-5"> 
       <nav
         className={`flex items-center justify-between max-w-7xl mx-auto py-4 px-6 rounded-2xl bg-white backdrop-blur-lg border transition-all duration-300 ${
           scrolled 
@@ -61,13 +62,8 @@ export default function Navbar() {
         </ul>
 
         {/* CTA - Updated to #613DDF and #F0EEFD */}
-        <div className="flex items-center gap-3">
-          <a
-            href="#contact"
-            className="hidden sm:inline-flex items-center text-sm font-bold text-[#613DDF] border-2 border-[#F0EEFD] bg-[#F0EEFD]/50 rounded-xl px-5 py-2.5 hover:bg-[#F0EEFD] transition-all no-underline"
-          >
-            Contact Us
-          </a>
+        <div className="flex items-center gap-3 ">
+         <LanguageDropdown/>
           <a
             href="#admission"
             className="inline-flex items-center text-sm font-bold text-white bg-[#613DDF] rounded-xl px-5 py-2.5 hover:shadow-lg hover:shadow-[#613DDF]/30 hover:-translate-y-0.5 transition-all no-underline"
