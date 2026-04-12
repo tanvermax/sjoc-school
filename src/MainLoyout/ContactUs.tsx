@@ -1,5 +1,5 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock } from 'lucide-react';
+
+import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const ContactUs = () => {
@@ -69,7 +69,7 @@ const ContactUs = () => {
           <div className="lg:col-span-5 space-y-8">
             
             {/* Map Container */}
-            <div className="relative w-full h-[300px] lg:h-[350px] rounded-[3rem] overflow-hidden shadow-2xl border-2 border-blue-50">
+            <div className="relative w-full h-75 lg:h-87.5 rounded-[3rem] overflow-hidden shadow-2xl border-2 border-blue-50">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288280590481!2d-79.2774786!3d43.7045582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d168f8245245%3A0x2113ca751c7a1962!2s347%20Danforth%20Rd%2C%20Scarborough%2C%20ON%20M1L%203X8%2C%20Canada!5e0!3m2!1sen!2sbd!4v1712910000000!5m2!1sen!2sbd"
                 className="absolute inset-0 w-full h-full border-0"

@@ -1,8 +1,9 @@
-"use client";
-import React, { useEffect, useState } from "react";
+
+import  { useEffect, useState } from "react";
 import { LanguageDropdown } from "./Language";
 import { X } from "lucide-react"; 
 import { TiThMenuOutline } from "react-icons/ti";
+import { Link } from "react-router";
 
 const NAV_LINKS = [
   { label: "Home", href: "/#home" },
@@ -33,7 +34,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2.5 no-underline">
-          <div className="w-10 h-10 bg-[#4185F4] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#4185F4]/20">
+          <div className="w-10 h-10 bg-[#4185F4] rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-[#4185F4]/20">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round">
               <path d="M12 3l-4 4H4v2h1v9h14V9h1V7h-4l-4-4z" />
               <rect x="9" y="13" width="6" height="7" />
@@ -67,7 +68,7 @@ export default function Navbar() {
             <LanguageDropdown />
           </div>
           <a
-            href="#admission"
+            href="/admissionform"
             className="inline-flex items-center text-sm font-bold text-white bg-[#4185F4] rounded-xl px-5 py-2.5 hover:bg-blue-600 hover:shadow-lg hover:shadow-[#4185F4]/30 hover:-translate-y-0.5 transition-all no-underline"
           >
             Apply Now →
@@ -106,13 +107,13 @@ export default function Navbar() {
               <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Language</span>
               <LanguageDropdown />
             </div>
-            <a
-              href="#admission"
+            <Link
+              to="/admissionform"
               onClick={() => setIsOpen(false)}
               className="flex items-center justify-center text-center text-base font-bold text-white bg-[#4185F4] rounded-xl py-4 no-underline shadow-lg shadow-[#4185F4]/20"
             >
               Apply Now →
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

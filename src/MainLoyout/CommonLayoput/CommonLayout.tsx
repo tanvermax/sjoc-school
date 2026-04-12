@@ -6,10 +6,12 @@ import Footer from "./Footer";
 export default function CommonLayout() {
   return (
     <div >
-     <div className="bg-[#6543E0]">
+    
        <Navbar />
+
+     <div className="relative top-15">
+       <Outlet/>
      </div>
-      <Outlet/>
 
       <Footer />
 
