@@ -13,9 +13,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-
       <AboutSchool />
-
       <OnlineRegistration />
       <SchoolStats />
       <TeachersSlider />
