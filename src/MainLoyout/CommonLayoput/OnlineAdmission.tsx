@@ -15,7 +15,7 @@ const OnlineRegistration = () => {
           
           {/* ── LEFT CONTENT ── */}
           <div className="flex flex-col text-left space-y-8 animate-in fade-in slide-in-from-left-8 duration-1000">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#DDDDF9]/30 bg-[#DDDDF9]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#DDDDF9]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#DDDDF9] bg-[#DDDDF9]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#ffffff]">
               <Sparkles size={14} />
               Online Registration
             </div>

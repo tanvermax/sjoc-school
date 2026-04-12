@@ -20,12 +20,12 @@ const AboutSchool = () => {
                  <img 
                   src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070" 
                   alt="Islamic Students" 
-                  className="h-full w-full object-cover grayscale brightness-110 contrast-125"
+                  className="h-full w-full object-cover  brightness-110 "
                 />
               </div>
 
               {/* Floating Stat Card: User Satisfaction style */}
-              <div className="absolute -top-6 -right-6 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-emerald-100 flex items-center gap-4 animate-bounce-slow">
+              <div className="absolute -top-6 -right-6 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-[#D0C5F5] flex items-center gap-4 animate-bounce-slow">
                 <div className="h-12 w-12 rounded-full bg-[#ece7fd] flex items-center justify-center text-[#613DDF]">
                    <Users size={24} />
                 </div>
@@ -50,7 +50,7 @@ const AboutSchool = () => {
           {/* ── RIGHT SIDE: STRUCTURED CONTENT ── */}
           <div className="space-y-8 bg-white p-5 rounded-4xl order-1 lg:order-2">
             <div className="space-y-4 text-left">
-              <div className="inline-flex items-center gap-2 bg-[#E5EDFD] text-[#613DDF] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-emerald-100">
+              <div className="inline-flex items-center gap-2 bg-[#E5EDFD] text-[#613DDF] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-[#D0C5F5]">
                 <CheckCircle2 size={14} />
                 Why Choose Our School?
               </div>
@@ -68,7 +68,7 @@ const AboutSchool = () => {
             </div>
 
             {/* Feature List (Matching the eSkooly "Why Choose Us" vertical list) */}
-            <div className="space-y-8">
+            <div className="space-y-8 text-left">
               <div className="flex gap-5 group">
                 <div className="flex-shrink-0 w-14 h-14 bg-[#E5EDFD] rounded-2xl flex items-center justify-center text-[#613DDF] group-hover:bg-[#613DDF] group-hover:text-white transition-all duration-300">
                   <ShieldCheck size={28} />
