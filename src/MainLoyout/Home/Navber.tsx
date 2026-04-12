@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <div className="fixed inset-x-0 top-4 z-40 px-5"> 
       <nav
-        className={`flex items-center justify-between max-w-7xl mx-auto py-4 px-6 rounded-2xl bg-white/90 backdrop-blur-lg border transition-all duration-300 ${
+        className={`flex items-center justify-between max-w-6xl mx-auto py-4 px-6 rounded-2xl bg-white/90 backdrop-blur-lg border transition-all duration-300 ${
           scrolled || isOpen
             ? "shadow-xl border-[#613DDF]/20 py-3" 
             : "border-transparent"

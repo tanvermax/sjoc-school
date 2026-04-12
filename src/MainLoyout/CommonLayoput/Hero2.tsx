@@ -52,7 +52,7 @@ export const HeroSection = () => {
         <div className="absolute -top-24 -left-24 w-72 h-72 lg:w-96 lg:h-96 bg-[#613DDF]/5 rounded-full blur-[80px] lg:blur-[120px]" />
       </div>
 
-      <div className="container mx-auto max-w-7xl px-6 relative z-10">
+      <div className="container mx-auto max-w-6xl px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* --- LEFT CONTENT --- */}
