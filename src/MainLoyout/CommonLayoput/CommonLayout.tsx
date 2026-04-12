@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Navbar from "../Home/Navber";
+import Footer from "./Footer";
 
 
 export default function CommonLayout() {
@@ -9,7 +10,9 @@ export default function CommonLayout() {
        <Navbar />
      </div>
       <Outlet/>
-      {/* <Footer/> */}
+
+      <Footer />
+
     </div>
   );
 }

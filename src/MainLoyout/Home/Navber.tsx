@@ -5,12 +5,12 @@ import { Menu, X } from "lucide-react"; // Added for mobile icons
 import { TiThMenuOutline } from "react-icons/ti";
 
 const NAV_LINKS = [
+  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Teachers", href: "#teachers" },
-  { label: "Admission", href: "#admission" },
-  { label: "Notices", href: "#notices" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Gallery", href: "#teachers" },
+  { label: "Faqs", href: "#faq" },
+  { label: "Contact", href: "/contact" },
+
 ];
 
 export default function Navbar() {
@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <div className="fixed inset-x-0 top-4 z-40 px-5"> 
       <nav
-        className={`flex items-center justify-between max-w-6xl mx-auto py-4 px-6 rounded-2xl bg-white/90 backdrop-blur-lg border transition-all duration-300 ${
+        className={`flex items-center justify-between max-w-7xl mx-auto py-4 px-6 rounded-2xl bg-white/90 backdrop-blur-lg border transition-all duration-300 ${
           scrolled || isOpen
             ? "shadow-xl border-[#613DDF]/20 py-3" 
             : "border-transparent"

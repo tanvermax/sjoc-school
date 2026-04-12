@@ -39,7 +39,7 @@ export const TeachersSlider = () => {
   };
 
   return (
-    <section id="teachers" className="relative max-w-6xl mx-auto py-16 lg:py-24 bg-white overflow-hidden">
+    <section id="teachers" className="relative max-w-7xl mx-auto py-16 lg:py-24 bg-white overflow-hidden">
       <div className="absolute -top-24 -right-24 w-72 lg:w-96 h-72 lg:h-96 bg-[#F0EEFD] rounded-full blur-[100px] lg:blur-[120px] -z-10" />
 
       <div className="container mx-auto px-6 relative z-10">

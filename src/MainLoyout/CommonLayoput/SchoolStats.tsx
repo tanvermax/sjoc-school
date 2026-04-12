@@ -34,7 +34,7 @@ const stats = [
 
 export const SchoolStats = () => {
   return (
-    <section className="relative py-24 max-w-6xl mx-auto  overflow-hidden">
+    <section className="relative py-24 max-w-7xl mx-auto  overflow-hidden">
       {/* Background Orbs to match the Hero design */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-indigo-400/10 rounded-full blur-[80px]" />

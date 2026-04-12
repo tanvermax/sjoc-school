@@ -1,4 +1,5 @@
 import App from "@/App";
+import ContactUs from "@/MainLoyout/ContactUs";
 import Home from "@/MainLoyout/Home/Home";
 import { createBrowserRouter } from "react-router";
 
@@ -10,6 +11,10 @@ const routes = createBrowserRouter([
             {
                 Component:Home,
                 path:"/"
+            },
+            {
+                Component:ContactUs,
+                path:"/contact"
             }
         ]
     }

@@ -11,7 +11,7 @@ const OnlineRegistration = () => {
       />
       <div className="absolute -right-20 top-0 h-[300px] w-[300px] lg:h-[500px] lg:w-[500px] rounded-full bg-[#DDDDF9]/10 blur-[80px] lg:blur-[120px]" />
       
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
           
           {/* ── LEFT CONTENT ── */}

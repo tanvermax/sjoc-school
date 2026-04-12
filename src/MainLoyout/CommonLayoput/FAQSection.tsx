@@ -48,7 +48,7 @@ export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section id='faq'  className="relative py-24 bg-white overflow-hidden">
       {/* Background Subtle Accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[#F0EEFD]/30 -z-10" />
       <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#F0EEFD] rounded-full blur-[120px] -z-10 opacity-60" />
@@ -72,7 +72,7 @@ export const FAQSection = () => {
         </div>
 
         {/* FAQ Grid - Split into 2 columns for better readability */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
           {faqData.map((item, index) => (
             <div 
               key={index}
