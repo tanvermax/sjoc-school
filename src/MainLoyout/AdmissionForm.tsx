@@ -260,7 +260,7 @@ export default function AdmissionForm() {
             </CardContent>
           </Card>
 
-          <div className="flex justify-end gap-4 pt-6">
+          <div className="flex justify-end gap-4 pt-6 pb-10">
             <Button type="button" variant="outline" className="h-14 px-8 rounded-2xl font-bold" onClick={() => form.reset()}>Reset Form</Button>
             <Button type="submit" className="h-14 px-12 rounded-2xl font-black bg-[#4185F4] hover:bg-blue-600 shadow-lg shadow-[#4185F4]/20">Submit Application</Button>
           </div>
