@@ -6,7 +6,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
-
+import notearch from "../../assets/notearch.png"
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -17,7 +17,7 @@ const Footer = () => {
           
           {/* ── COLUMN 1: USEFUL LINKS ── */}
           <div className="space-y-6">
-            <h4 className="text-lg font-bold font-['Fraunces'] border-l-4 border-white/30 pl-3">Useful Links</h4>
+            <h4 className="text-lg font-semibold  border-l-4 border-white/30 pl-3">Useful Links</h4>
             <ul className="space-y-3 text-sm text-blue-50/80">
               {['Home', 'About Us', 'Photos', 'Videos', 'Contact Us'].map((link) => (
                 <li key={link}>
@@ -32,7 +32,7 @@ const Footer = () => {
 
           {/* ── COLUMN 2: QUICK LINKS ── */}
           <div className="space-y-6">
-            <h4 className="text-lg font-bold font-['Fraunces'] border-l-4 border-white/30 pl-3">Quick Links</h4>
+            <h4 className="text-lg font-semibold  border-l-4 border-white/30 pl-3">Quick Links</h4>
             <ul className="space-y-3 text-sm text-blue-50/80">
               {['Admin Login', 'Terms Condition', 'Privacy Policy', 'Refund Cancellation'].map((link) => (
                 <li key={link}>
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* ── COLUMN 3: HIGH-VISIBILITY DOWNLOADS ── */}
           <div className="lg:col-span-1 space-y-6">
-            <h4 className="text-lg font-bold font-['Fraunces'] border-l-4 border-white/30 pl-3">Download Apps</h4>
+            <h4 className="text-lg font-semibold  border-l-4 border-white/30 pl-3">Download Apps</h4>
             <div className="grid grid-cols-1 gap-4">
               {/* Student/Parent App - High Visibility */}
               <div className="flex flex-col gap-2">
@@ -54,11 +54,11 @@ const Footer = () => {
                 <div className="flex gap-2">
                   <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-slate-950 text-white py-3 rounded-xl border border-white/10 hover:bg-black transition-all shadow-lg active:scale-95">
                     <PlayCircle size={18} />
-                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Get it on</p><p className="text-[11px] font-bold">Android</p></div>
+                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Get it on</p><p className="text-[11px] font-semibold">Android</p></div>
                   </a>
                   <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-slate-950 text-white py-3 rounded-xl border border-white/10 hover:bg-black transition-all shadow-lg active:scale-95">
                     <Apple size={18} />
-                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Download on</p><p className="text-[11px] font-bold">iOS App</p></div>
+                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Download on</p><p className="text-[11px] font-semibold">iOS App</p></div>
                   </a>
                 </div>
               </div>
@@ -69,11 +69,11 @@ const Footer = () => {
                 <div className="flex gap-2">
                   <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-white text-slate-900 py-3 rounded-xl hover:bg-blue-50 transition-all shadow-lg active:scale-95">
                     <PlayCircle size={18} />
-                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Get it on</p><p className="text-[11px] font-bold">Android</p></div>
+                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Get it on</p><p className="text-[11px] font-semibold">Android</p></div>
                   </a>
                   <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-white text-slate-900 py-3 rounded-xl hover:bg-blue-50 transition-all shadow-lg active:scale-95">
                     <Apple size={18} />
-                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Download on</p><p className="text-[11px] font-bold">iOS App</p></div>
+                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Download on</p><p className="text-[11px] font-semibold">iOS App</p></div>
                   </a>
                 </div>
               </div>
@@ -82,7 +82,7 @@ const Footer = () => {
 
           {/* ── COLUMN 4: CONTACT ── */}
           <div className="space-y-6">
-            <h4 className="text-lg font-bold font-['Fraunces'] border-l-4 border-white/30 pl-3">Contact Us</h4>
+            <h4 className="text-lg font-semibold  border-l-4 border-white/30 pl-3">Contact Us</h4>
             <div className="space-y-4">
               <div className="flex gap-3 items-start">
                 <MapPin size={20} className="text-blue-200 mt-1 shrink-0" />
@@ -114,13 +114,13 @@ const Footer = () => {
         <div className="container max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
           <div className="flex flex-col items-center gap-4 mb-6">
             <div className="h-16 w-16 bg-[#4185F4] rounded-2xl flex items-center justify-center text-white shadow-xl shadow-blue-200">
-               <GraduationCap size={36} />
+               <img src={notearch} alt="" />
             </div>
             <div>
-              <h2 className="text-[#4185F4] text-4xl font-black tracking-tighter font-['Fraunces']">
+              <h2 className="text-[#4185F4] text-4xl font-black tracking-tighter ">
                 Note<span className="text-slate-900">Arch</span>
               </h2>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mt-1">
+              <p className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.3em] mt-1">
                 Institutional Management System
               </p>
             </div>
@@ -130,7 +130,7 @@ const Footer = () => {
             <p className="text-slate-500 text-xs font-medium">
               © {currentYear} Sunatul Jamaat of Ontario Canada. All Rights Reserved.
             </p>
-            <p className="text-slate-300 text-[10px] font-bold flex items-center justify-center gap-1">
+            <p className="text-slate-300 text-[10px] font-semibold flex items-center justify-center gap-1">
               POWERED BY <span className="text-slate-400">NOTEARCH TECHNOLOGY</span>
             </p>
           </div>
