@@ -41,8 +41,8 @@ export default function Navbar() {
             </svg>
           </div>
           <span
-            style={{ fontFamily: "'Fraunces', serif" }}
-            className="text-[1.3rem] font-black text-slate-900 tracking-tight"
+            // style={{ fontFamily: "'Fraunces', serif" }}
+            className="text-[1.3rem]   font-bold text-slate-900 tracking-tighter"
           >
             SJOC
           </span>

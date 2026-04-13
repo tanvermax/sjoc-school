@@ -74,7 +74,7 @@ export const SchoolStats = () => {
 
                 <div className="space-y-1">
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl font-black text-[#4185F4] font-['Fraunces']">
+                    <span className="text-5xl font-semibold text-[#4185F4] ">
                       {stat.value}
                     </span>
                     <span className="text-2xl font-bold text-[#4185F4]">

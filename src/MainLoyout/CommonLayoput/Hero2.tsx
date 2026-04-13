@@ -9,7 +9,7 @@ const slides = [
     id: 'admin',
     btnText: "Get Started",
     tag: "#1 Globally Ranked",
-    title: <>Free <span className="font-light italic text-[#4185F4]">Online</span> <br /> School <br /> Management</>,
+    title: <>Free <span className="font-light  text-[#4185F4]">Online</span> <br /> School <br /> Management</>,
     desc: "Seamlessly manage your school, college, or any institution. Completely free for life, with no limitations.",
     stats: { label: "Total Students", value: "1,365", icon: <Users size={16} /> }
   },
@@ -17,7 +17,7 @@ const slides = [
     id: 'student',
     btnText: "Explore Now",
     tag: "Interactive Learning",
-    title: <>Empower <span className="font-light italic text-[#4185F4]">Students</span> <br /> Beyond the <br /> Classroom</>,
+    title: <>Empower <span className="font-light  text-[#4185F4]">Students</span> <br /> Beyond the <br /> Classroom</>,
     desc: "Engage students with integrated LMS tools, online quizzes, and real-time progress tracking.",
     stats: { label: "Quiz Score", value: "98%", icon: <Star size={16} /> }
   },
@@ -25,7 +25,7 @@ const slides = [
     id: 'parent',
     btnText: "Join Us",
     tag: "Parent Portal",
-    title: <>Stay <span className="font-light italic text-[#4185F4]">Connected</span> <br /> Anytime, <br /> Anywhere</>,
+    title: <>Stay <span className="font-light  text-[#4185F4]">Connected</span> <br /> Anytime, <br /> Anywhere</>,
     desc: "Mobile-first platform ensuring parents stay updated with real-time notifications and fee management.",
     stats: { label: "Attendance", value: "On Time", icon: <Bell size={16} /> }
   }

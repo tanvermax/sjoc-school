@@ -11,128 +11,128 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#4185F4]  py-6 overflow-hidden text-white">
-      {/* Decorative Top Curve */}
-     
-
-      <div className="container max-w-7xl mx-auto px-6 py-10 relative z-10">
+    <footer className="relative bg-[#4185F4] pt-16 overflow-hidden text-white">
+      <div className="container max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
-          {/* ── COLUMN 1: BRAND ── */}
+          {/* ── COLUMN 1: USEFUL LINKS ── */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="h-12 w-12 bg-white rounded-xl flex items-center justify-center text-[#4185F4] shadow-lg shadow-blue-900/20">
-                <GraduationCap size={28} />
-              </div>
-              <span className="font-['Fraunces'] text-xl font-black leading-tight">
-                Sunatul <br /> Jamaat
-              </span>
-            </div>
-            <p className="text-blue-50/70 text-left pb-4 leading-relaxed text-sm">
-              Sunatul Jamaat of Ontario Canada is committed to providing quality Islamic education and academic excellence. Join us to build a bright future with knowledge and faith.
-            </p>
-            <div className="flex gap-4">
-              {[FaFacebookF, IoLogoInstagram, FaYoutube, BsTwitterX].map((Icon, i) => (
-                <a key={i} href="#" className="h-10 w-10 rounded-full border border-blue-200/30 flex items-center justify-center hover:bg-white hover:text-[#4185F4] transition-all">
-                  <Icon size={18} />
-                </a>
+            <h4 className="text-lg font-bold font-['Fraunces'] border-l-4 border-white/30 pl-3">Useful Links</h4>
+            <ul className="space-y-3 text-sm text-blue-50/80">
+              {['Home', 'About Us', 'Photos', 'Videos', 'Contact Us'].map((link) => (
+                <li key={link}>
+                  <a href="#" className="hover:text-white flex items-center group transition-colors">
+                    <ArrowUpRight size={14} className="mr-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+                    {link}
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* ── COLUMN 2: LINKS ── */}
-          <div className="grid grid-cols-2 lg:grid-cols-1 gap-8">
-            <div className="space-y-6">
-              <h4 className="text-lg font-bold font-['Fraunces']">Useful Links</h4>
-              <ul className="space-y-3 text-sm text-blue-100/70">
-                {['Home', 'About Us', 'Photos', 'Videos', 'Contact Us'].map((link) => (
-                  <li key={link}>
-                    <a href="#" className="hover:text-white flex items-center group transition-colors">
-                      <ArrowUpRight size={14} className="mr-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* ── COLUMN 3: APP DOWNLOADS ── */}
+          {/* ── COLUMN 2: QUICK LINKS ── */}
           <div className="space-y-6">
-            <h4 className="text-lg font-bold font-['Fraunces']">Download Notearch Apps</h4>
-            <div className="space-y-4">
-              {/* Student/Parent App */}
-              <div className="p-4 rounded-2xl bg-white/10 border border-white/5 space-y-3">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-blue-100/50">Student & Parent</span>
-                <div className="flex gap-3">
-                  <button className="flex-1 flex items-center justify-center gap-2 bg-slate-900 py-2 rounded-lg text-[10px] font-bold hover:scale-105 transition-transform">
-                    <PlayCircle size={14} /> Android
-                  </button>
-                  <button className="flex-1 flex items-center justify-center gap-2 bg-slate-900 py-2 rounded-lg text-[10px] font-bold hover:scale-105 transition-transform">
-                    <Apple size={14} /> iOS App
-                  </button>
+            <h4 className="text-lg font-bold font-['Fraunces'] border-l-4 border-white/30 pl-3">Quick Links</h4>
+            <ul className="space-y-3 text-sm text-blue-50/80">
+              {['Admin Login', 'Terms Condition', 'Privacy Policy', 'Refund Cancellation'].map((link) => (
+                <li key={link}>
+                  <a href="#" className="hover:text-white flex items-center group transition-colors">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* ── COLUMN 3: HIGH-VISIBILITY DOWNLOADS ── */}
+          <div className="lg:col-span-1 space-y-6">
+            <h4 className="text-lg font-bold font-['Fraunces'] border-l-4 border-white/30 pl-3">Download Apps</h4>
+            <div className="grid grid-cols-1 gap-4">
+              {/* Student/Parent App - High Visibility */}
+              <div className="flex flex-col gap-2">
+                <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Student & Parent</span>
+                <div className="flex gap-2">
+                  <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-slate-950 text-white py-3 rounded-xl border border-white/10 hover:bg-black transition-all shadow-lg active:scale-95">
+                    <PlayCircle size={18} />
+                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Get it on</p><p className="text-[11px] font-bold">Android</p></div>
+                  </a>
+                  <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-slate-950 text-white py-3 rounded-xl border border-white/10 hover:bg-black transition-all shadow-lg active:scale-95">
+                    <Apple size={18} />
+                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Download on</p><p className="text-[11px] font-bold">iOS App</p></div>
+                  </a>
                 </div>
               </div>
+
               {/* Staff App */}
-              <div className="p-4 rounded-2xl bg-white/10 border border-white/5 space-y-3">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-blue-100/50">Staff & Teacher</span>
-                <div className="flex gap-3">
-                  <button className="flex-1 flex items-center justify-center gap-2 bg-white text-[#4185F4] py-2 rounded-lg text-[10px] font-bold hover:bg-blue-50 transition-all shadow-sm">
-                    Android
-                  </button>
-                  <button className="flex-1 flex items-center justify-center gap-2 bg-white text-[#4185F4] py-2 rounded-lg text-[10px] font-bold hover:bg-blue-50 transition-all shadow-sm">
-                    iOS App
-                  </button>
+              <div className="flex flex-col gap-2">
+                <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Staff & Teacher</span>
+                <div className="flex gap-2">
+                  <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-white text-slate-900 py-3 rounded-xl hover:bg-blue-50 transition-all shadow-lg active:scale-95">
+                    <PlayCircle size={18} />
+                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Get it on</p><p className="text-[11px] font-bold">Android</p></div>
+                  </a>
+                  <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-white text-slate-900 py-3 rounded-xl hover:bg-blue-50 transition-all shadow-lg active:scale-95">
+                    <Apple size={18} />
+                    <div className="text-left leading-tight"><p className="text-[8px] opacity-60">Download on</p><p className="text-[11px] font-bold">iOS App</p></div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
           {/* ── COLUMN 4: CONTACT ── */}
-          <div className="space-y-6 text-left">
-            <h4 className="text-lg font-bold font-['Fraunces']">Contact Us</h4>
+          <div className="space-y-6">
+            <h4 className="text-lg font-bold font-['Fraunces'] border-l-4 border-white/30 pl-3">Contact Us</h4>
             <div className="space-y-4">
-              <div className="flex gap-4 group">
-                <div className="h-10 w-10 shrink-0 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <MapPin size={18} className="text-blue-100" />
-                </div>
-                <div className="text-sm">
-                  <p className="font-bold">School Address</p>
-                  <p className="text-blue-100/70">347 Danforth Road, Scarborough, M1L 3X8</p>
-                </div>
+              <div className="flex gap-3 items-start">
+                <MapPin size={20} className="text-blue-200 mt-1 shrink-0" />
+                <p className="text-sm text-blue-50/80">347 Danforth Road, Scarborough, M1L 3X8</p>
               </div>
-              <div className="flex gap-4 group">
-                <div className="h-10 w-10 shrink-0 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Mail size={18} className="text-blue-100" />
-                </div>
-                <div className="text-sm">
-                  <p className="font-bold">Mail Us</p>
-                  <p className="text-blue-100/70">saaza1@yahoo.com</p>
-                </div>
+              <div className="flex gap-3 items-center">
+                <Mail size={20} className="text-blue-200 shrink-0" />
+                <p className="text-sm text-blue-50/80">saaza1@yahoo.com</p>
               </div>
-              <div className="flex gap-4 group">
-                <div className="h-10 w-10 shrink-0 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Phone size={18} className="text-blue-100" />
-                </div>
-                <div className="text-sm">
-                  <p className="font-bold">Call Us</p>
-                  <p className="text-blue-100/70">416-690-2298</p>
-                </div>
+              <div className="flex gap-3 items-center">
+                <Phone size={20} className="text-blue-200 shrink-0" />
+                <p className="text-sm text-blue-50/80">416-690-2298</p>
               </div>
+            </div>
+            {/* Social Links moved here for balance */}
+            <div className="flex gap-3 pt-2">
+              {[FaFacebookF, IoLogoInstagram, FaYoutube, BsTwitterX].map((Icon, i) => (
+                <a key={i} href="#" className="h-9 w-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#4185F4] transition-all">
+                  <Icon size={16} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
+      </div>
 
-        {/* ── BOTTOM BAR ── */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-xs text-blue-100/40">
-            © {currentYear} Sunatul Jamaat of Ontario Canada. All Rights Reserved.
-          </p>
-          <div className="flex gap-6 text-xs text-blue-100/40 font-bold uppercase tracking-widest">
-            <a href="#" className="hover:text-white transition-colors">Admin Login</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Refund</a>
+      {/* ── BRAND FOOTER (Like NoteArch Template) ── */}
+      <div className="bg-slate-50 py-12">
+        <div className="container max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
+          <div className="flex flex-col items-center gap-4 mb-6">
+            <div className="h-16 w-16 bg-[#4185F4] rounded-2xl flex items-center justify-center text-white shadow-xl shadow-blue-200">
+               <GraduationCap size={36} />
+            </div>
+            <div>
+              <h2 className="text-[#4185F4] text-4xl font-black tracking-tighter font-['Fraunces']">
+                Note<span className="text-slate-900">Arch</span>
+              </h2>
+              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mt-1">
+                Institutional Management System
+              </p>
+            </div>
+          </div>
+          
+          <div className="space-y-2">
+            <p className="text-slate-500 text-xs font-medium">
+              © {currentYear} Sunatul Jamaat of Ontario Canada. All Rights Reserved.
+            </p>
+            <p className="text-slate-300 text-[10px] font-bold flex items-center justify-center gap-1">
+              POWERED BY <span className="text-slate-400">NOTEARCH TECHNOLOGY</span>
+            </p>
           </div>
         </div>
       </div>

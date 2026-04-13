@@ -100,7 +100,7 @@ export const TeachersSlider = () => {
 
                   {/* Teacher Info */}
                   <div className="text-center pb-4 px-2">
-                    <h4 className="text-lg lg:text-xl font-black text-slate-900 mb-1 font-['Fraunces'] group-hover:text-[#4185F4]">
+                    <h4 className="text-lg lg:text-xl  text-slate-900 mb-1  group-hover:text-[#4185F4]">
                       {teacher.name}
                     </h4>
                     <p className="text-[#4185F4] text-[10px] lg:text-[11px] font-bold uppercase tracking-widest mb-5 opacity-80">
