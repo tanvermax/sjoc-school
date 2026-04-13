@@ -1,6 +1,6 @@
 import { 
   MapPin, Mail, Phone, 
-  Apple, PlayCircle, ArrowUpRight, GraduationCap 
+  Apple, PlayCircle, ArrowUpRight
 } from 'lucide-react';
 import { FaFacebookF } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";

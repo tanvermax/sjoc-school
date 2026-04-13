@@ -81,7 +81,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden p-2 text-slate-900 hover:bg-blue-50 rounded-xl transition-colors"
         >
-          {isOpen ? <X size={28} /> : <TiThMenuOutline size={28} />}
+          {isOpen ? <X className="text-[#4185F4]" size={25} /> : <TiThMenuOutline className="text-[#4185F4]" size={25} />}
         </button>
 
         {/* Mobile Menu Overlay */}
