@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 
 const OnlineRegistration = () => {
   return (
-    <section className="relative min-h-[600px] w-full overflow-hidden bg-[#4185F4] py-16 lg:py-24 text-white">
+    <section className="relative min-h-150 w-full overflow-hidden bg-[#4185F4] py-16 lg:py-24 rounded-3xl text-white">
       {/* Dynamic Background Elements - Using soft blue variants */}
       <div 
         className="absolute inset-0 opacity-10" 
         style={{ backgroundImage: `radial-gradient(#ffffff 1px, transparent 1px)`, backgroundSize: '40px 40px' }} 
       />
-      <div className="absolute -right-20 top-0 h-[300px] w-[300px] lg:h-[500px] lg:w-[500px] rounded-full bg-white/10 blur-[80px] lg:blur-[120px]" />
+      <div className="absolute -right-20 top-0 h-75 w-75 lg:h-125 lg:w-125 rounded-full bg-white/10 blur-[80px] lg:blur-[120px]" />
       
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">

@@ -1,38 +1,69 @@
-
-import  { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Users, ChevronRight, CheckCircle2, Bell } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star, Users, ChevronRight, CheckCircle2, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Lottie from "lottie-react";
+
+import lottie1 from "../../assets/learning.json";
+import lottie2 from "../../assets/education.json";
+
 
 const slides = [
   {
-    id: 'admin',
+    id: "admin",
+    lottiefile: lottie1,
     btnText: "Get Started",
     tag: "#1 Globally Ranked",
-    title: <>Free <span className="font-light  text-[#4185F4]">Online</span> <br /> School <br /> Management</>,
+    title: (
+      <>
+        Free <span className="font-light  text-[#4185F4]">Online</span> <br />{" "}
+        School <br /> Management
+      </>
+    ),
     desc: "Seamlessly manage your school, college, or any institution. Completely free for life, with no limitations.",
-    stats: { label: "Total Students", value: "1,365", icon: <Users size={16} /> }
+    stats: {
+      label: "Total Students",
+      value: "1,365",
+      icon: <Users size={16} />,
+    },
   },
   {
-    id: 'student',
+    id: "student",
+    lottiefile: lottie2,
+
     btnText: "Explore Now",
     tag: "Interactive Learning",
-    title: <>Empower <span className="font-light  text-[#4185F4]">Students</span> <br /> Beyond the <br /> Classroom</>,
+    title: (
+      <>
+        Empower <span className="font-light  text-[#4185F4]">Students</span>{" "}
+        <br /> Beyond the <br /> Classroom
+      </>
+    ),
     desc: "Engage students with integrated LMS tools, online quizzes, and real-time progress tracking.",
-    stats: { label: "Quiz Score", value: "98%", icon: <Star size={16} /> }
+    stats: { label: "Quiz Score", value: "98%", icon: <Star size={16} /> },
   },
   {
-    id: 'parent',
+    id: "parent",
+    lottiefile: lottie1,
+
     btnText: "Join Us",
     tag: "Parent Portal",
-    title: <>Stay <span className="font-light  text-[#4185F4]">Connected</span> <br /> Anytime, <br /> Anywhere</>,
+    title: (
+      <>
+        Stay <span className="font-light  text-[#4185F4]">Connected</span>{" "}
+        <br /> Anytime, <br /> Anywhere
+      </>
+    ),
     desc: "Mobile-first platform ensuring parents stay updated with real-time notifications and fee management.",
-    stats: { label: "Attendance", value: "On Time", icon: <Bell size={16} /> }
-  }
+    stats: { label: "Attendance", value: "On Time", icon: <Bell size={16} /> },
+  },
 ];
 
 export const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0);
+
+ const LottieComponent = (Lottie as any).default || Lottie;
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -45,7 +76,6 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen w-full flex items-center pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden bg-white">
-      
       {/* Background Layer - Brand Blue Tints */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 right-0 w-full lg:w-1/2 h-[50vh] lg:h-[80vh] bg-blue-50/40 rounded-b-[50px] lg:rounded-l-[100px] lg:rounded-br-none transform lg:translate-x-20" />
@@ -54,7 +84,6 @@ export const HeroSection = () => {
 
       <div className="container mx-auto max-w-7xl px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
           {/* --- LEFT CONTENT --- */}
           <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
             <AnimatePresence mode="wait">
@@ -86,18 +115,28 @@ export const HeroSection = () => {
                     {current.btnText}
                     <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                  
+
                   <div className="flex items-center gap-3">
                     <div className="flex -space-x-3">
-                       {[11, 12, 13].map(i => (
-                         <div key={i} className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-sm">
-                           <img src={`https://i.pravatar.cc/100?img=${i}`} alt="user" />
-                         </div>
-                       ))}
+                      {[11, 12, 13].map((i) => (
+                        <div
+                          key={i}
+                          className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-sm"
+                        >
+                          <img
+                            src={`https://i.pravatar.cc/100?img=${i}`}
+                            alt="user"
+                          />
+                        </div>
+                      ))}
                     </div>
                     <div className="text-left">
-                      <p className="text-[10px] lg:text-xs font-bold text-slate-900 leading-none">125k+ Schools</p>
-                      <p className="text-[10px] lg:text-xs text-slate-400">Trusted globally</p>
+                      <p className="text-[10px] lg:text-xs font-bold text-slate-900 leading-none">
+                        125k+ Schools
+                      </p>
+                      <p className="text-[10px] lg:text-xs text-slate-400">
+                        Trusted globally
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -111,7 +150,9 @@ export const HeroSection = () => {
                   key={idx}
                   onClick={() => setActiveTab(idx)}
                   className={`h-2 rounded-full transition-all duration-500 ${
-                    activeTab === idx ? "w-10 lg:w-12 bg-[#4185F4]" : "w-2 bg-slate-200"
+                    activeTab === idx
+                      ? "w-10 lg:w-12 bg-[#4185F4]"
+                      : "w-2 bg-slate-200"
                   }`}
                 />
               ))}
@@ -132,17 +173,23 @@ export const HeroSection = () => {
                 {/* Main Image Frame - Switched to #4185F4 Tint */}
                 <div className="absolute inset-0 rounded-[60px] lg:rounded-[100px] bg-[#4185F4]/10 transform -rotate-3 lg:-rotate-6" />
                 <div className="relative h-full w-full rounded-[60px] lg:rounded-[100px] overflow-hidden border-4 lg:border-8 border-white shadow-2xl shadow-[#4185F4]/10">
-                  <img 
+                  {/* <img 
                     src={`/hero-${current.id}.jpg`} 
                     alt="School Management"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  /> */}
+                  <LottieComponent
+                    animationData={current.lottiefile}
+                    loop
+                    autoplay
+                    className="h-full w-full object-cover"
                   />
                   {/* Subtle Brand Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#4185F4]/10 to-transparent" />
                 </div>
 
                 {/* Floating Stats Card */}
-                <motion.div 
+                <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   className="absolute -left-6 lg:-left-12 top-1/4 bg-white p-3 lg:p-5 rounded-2xl lg:rounded-[2.5rem] shadow-xl border border-blue-50 flex items-center gap-3 lg:gap-4 scale-90 lg:scale-100"
@@ -151,13 +198,17 @@ export const HeroSection = () => {
                     {current.stats.icon}
                   </div>
                   <div className="text-left">
-                    <p className="text-[8px] lg:text-[10px] font-bold text-slate-400 uppercase tracking-widest">{current.stats.label}</p>
-                    <p className="text-lg lg:text-2xl font-black text-slate-900">{current.stats.value}</p>
+                    <p className="text-[8px] lg:text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                      {current.stats.label}
+                    </p>
+                    <p className="text-lg lg:text-2xl font-black text-slate-900">
+                      {current.stats.value}
+                    </p>
                   </div>
                 </motion.div>
 
                 {/* Verified Notification */}
-                <motion.div 
+                <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   className="absolute -right-4 lg:-right-8 bottom-10 lg:bottom-20 bg-white p-3 lg:p-4 rounded-xl lg:rounded-3xl shadow-xl border border-blue-50 flex items-center gap-2 lg:gap-3 scale-90 lg:scale-100"
@@ -165,12 +216,13 @@ export const HeroSection = () => {
                   <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center">
                     <CheckCircle2 size={14} />
                   </div>
-                  <p className="text-[10px] lg:text-sm font-bold text-slate-800 lg:pr-4">Verified</p>
+                  <p className="text-[10px] lg:text-sm font-bold text-slate-800 lg:pr-4">
+                    Verified
+                  </p>
                 </motion.div>
               </motion.div>
             </AnimatePresence>
           </div>
-
         </div>
       </div>
     </section>

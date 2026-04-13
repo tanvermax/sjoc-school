@@ -4,7 +4,7 @@ import { LanguageDropdown } from "./Language";
 import { X } from "lucide-react"; 
 import { TiThMenuOutline } from "react-icons/ti";
 import { Link } from "react-router";
-
+import logo from "../../assets/logo.png";
 const NAV_LINKS = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/#about" },
@@ -26,14 +26,14 @@ export default function Navbar() {
   return (
     <div className="fixed inset-x-0 top-4 z-40 px-5"> 
       <nav
-        className={`flex items-center justify-between max-w-7xl mx-auto py-4 px-6 rounded-2xl bg-white/90 backdrop-blur-lg border transition-all duration-300 ${
+        className={`flex items-center justify-between max-w-7xl mx-auto py-4 px-6 rounded-2xl bg-white/10 backdrop-blur-lg border transition-all duration-300 ${
           scrolled || isOpen
             ? "shadow-xl border-[#4185F4]/20 py-3" 
             : "border-transparent"
         }`}
       >
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2.5 no-underline">
+        {/* <a href="#home" className="flex items-center gap-2.5 no-underline">
           <div className="w-10 h-10 bg-[#4185F4] rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-[#4185F4]/20">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round">
               <path d="M12 3l-4 4H4v2h1v9h14V9h1V7h-4l-4-4z" />
@@ -46,7 +46,8 @@ export default function Navbar() {
           >
             SJOC
           </span>
-        </a>
+        </a> */}
+         <img className="w-40 relative -left-10" src={logo} alt="" />
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex items-center gap-8 list-none m-0 p-0">
@@ -54,7 +55,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm font-bold text-slate-500 hover:text-[#4185F4] transition-colors no-underline"
+                className="text-sm font-bold text-slate-900 hover:text-[#4185F4] transition-colors no-underline"
               >
                 {l.label}
               </a>
