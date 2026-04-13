@@ -33,21 +33,8 @@ export default function Navbar() {
         }`}
       >
         {/* Logo */}
-        {/* <a href="#home" className="flex items-center gap-2.5 no-underline">
-          <div className="w-10 h-10 bg-[#4185F4] rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-[#4185F4]/20">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round">
-              <path d="M12 3l-4 4H4v2h1v9h14V9h1V7h-4l-4-4z" />
-              <rect x="9" y="13" width="6" height="7" />
-            </svg>
-          </div>
-          <span
-            // style={{ fontFamily: "'Fraunces', serif" }}
-            className="text-[1.3rem]   font-bold text-slate-900 tracking-tighter"
-          >
-            SJOC
-          </span>
-        </a> */}
-         <img className="w-40 relative -left-10" src={logo} alt="" />
+       
+         <img className="w-40 relative -left-15" src={logo} alt="" />
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex items-center gap-8 list-none m-0 p-0">
