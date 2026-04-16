@@ -12,7 +12,7 @@ import { FaYoutube } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import notearch from "../../assets/notearch.png";
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+
 
   return (
     <footer className="relative bg-[#ffffff] pt-16 overflow-hidden text-black">
