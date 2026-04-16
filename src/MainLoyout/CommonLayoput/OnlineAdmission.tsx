@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const OnlineRegistration = () => {
   return (
-    <section className="relative min-h-150 w-full overflow-hidden bg-[#4185F4] py-16 lg:py-24 rounded-3xl text-white">
+    <section className="relative min-h-150 w-full overflow-hidden bg-[#4185F4] py-16 lg:py-24  text-white">
       {/* Dynamic Background Elements - Using soft blue variants */}
       <div 
         className="absolute inset-0 opacity-10" 
