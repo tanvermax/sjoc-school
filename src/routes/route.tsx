@@ -1,6 +1,7 @@
 import App from "@/App";
 import AdmissionForm from "@/MainLoyout/AdmissionForm";
 import ContactUs from "@/MainLoyout/ContactUs";
+import Gallery from "@/MainLoyout/Gallery";
 import Home from "@/MainLoyout/Home/Home";
 import { createBrowserRouter } from "react-router";
 
@@ -17,6 +18,11 @@ const routes = createBrowserRouter([
                 Component:ContactUs,
                 path:"/contact"
             },
+            {
+                Component:Gallery,
+                path:"/gallery"
+            },
+
             {
                 Component:AdmissionForm,
                 path:"/admissionform"

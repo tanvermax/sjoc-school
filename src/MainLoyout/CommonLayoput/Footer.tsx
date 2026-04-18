@@ -5,6 +5,7 @@ import {
   Apple,
   PlayCircle,
   ArrowUpRight,
+  
 } from "lucide-react";
 import { FaFacebookF } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
