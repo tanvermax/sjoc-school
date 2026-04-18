@@ -5,13 +5,13 @@ import {
   Apple,
   PlayCircle,
   ArrowUpRight,
-  
+
 } from "lucide-react";
 import { FaFacebookF } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
-import notearch from "../../assets/notearch.png";
+import notearch from "../../assets/logo.png";
 const Footer = () => {
 
 
@@ -175,14 +175,14 @@ const Footer = () => {
         <div className="container max-w-7xl mx-auto px-6 pb-10 flex flex-col items-center text-center">
           <div className="flex flex-col items-center gap-4 mb-6">
             <div className="flex items-center gap-5">
-              <div className="h-16 w-16 bg-[#4185F4] rounded-2xl flex items-center justify-center text-white shadow-xl shadow-blue-200">
-                  <img src={notearch} className="w-15" alt="" />
+              {/* <div className="  rounded-2xl flex items-center justify-center text-white shadow-xl shadow-blue-200"> */}
+                  <img src={notearch} className="w-50" alt="" />
                
   
-               </div>
-               <h2 className="text-[#4185F4] italic  text-4xl font-black tracking-tighter ">
+               {/* </div> */}
+               <h2 className="text-[#4185F4]   text-4xl font-black tracking-tighter ">
                 {" "}
-                Note<span className="text-black">Arch</span>
+                SJ<span className="text-black">OC</span>
               </h2>
              
             </div>
